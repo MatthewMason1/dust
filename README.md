@@ -1,0 +1,2 @@
+# dust
+a small project
