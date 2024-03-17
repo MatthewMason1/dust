@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socials - MatthewMason</title>
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- Add favicon -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background-color 0.5s ease;
+        }
+        header, nav, footer {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            flex: 0 0 auto;
+        }
+        header {
+            background-color: #ffc107;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 20px;
+            text-align: center;
+            transition: background-color 0.5s ease;
+        }
+        .button {
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            display: inline-block;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            background-color: rgba(51, 51, 51, 0.6);
+            transition: background-color 0.3s ease;
+        }
+        .button img {
+            width: 100%;
+            height: auto;
+        }
+        .button:hover {
+            background-color: rgba(68, 68, 68, 0.8);
+        }
+        .button-green {
+            background-color: green;
+        }
+        .button-blue {
+            background-color: blue;
+        }
+        section {
+            padding: 0; /* Adjust padding if necessary */
+            flex: 1;
+            overflow: auto; /* Allow scrolling if necessary */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            background-color: #222;
+            text-align: center;
+            padding: 10px 0;
+            transition: background-color 0.5s ease;
+            margin-top: auto;
+        }
+        footer.blue-mode {
+            background-color: blue;
+        }
+        #about {
+            position: relative; /* Make the section relative for absolute positioning */
+        }
+        #about iframe {
+            position: absolute; /* Position the iframe absolutely */
+            top: 0; /* Align to the top of the section */
+            left: 0; /* Align to the left of the section */
+            width: 0%; /* Fill the entire width of the section */
+            height: 0%; /* height */
+            bottom: 0; /* Align to the bottom of the section */
+            border: none; /* Remove iframe border */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            grid-gap: 20px; /* Gap between columns */
+        }
+
+        .box {
+            width: 350px; /* Width changed to make them rectangles */
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.356); /* Dark blueish grey, 40% transparent */
+            /* margin: auto; */ /* Center boxes horizontally */
+            border-radius: 10px; /* Rounded corners */
+            position: relative; /* Positioning for shadow and icon */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow */
+            transition: transform 0.3s ease; /* Transition for hover effect */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+        }
+
+        .box:hover {
+            transform: scale(1.05); /* Grow a little bit on hover */
+        }
+
+        .box img {
+            position: relative; /* Position the icon relatively */
+            margin-bottom: 1px; /* Add margin bottom to create space between icon and text */
+            width: 50px; /* Set width of icon */
+            height: 50px; /* Set height of icon */
+        }
+
+        .box .title {
+            font-size: 28px; /* Larger font size */
+            font-weight: bold;
+            text-align: right;
+            position: absolute;
+            top: 25px; /* Adjust top position */
+            right: 190px; /* Adjust right position */
+        }
+
+        .box p {
+            margin: 0;
+            padding: 10px; /* Add padding for text */
+            font-size: 14px;
+        }
+
+        .box .button {
+            background-color: rgba(0, 0, 0, 0.377);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            text-align: center;
+            width: calc(100% - 40px); /* Adjusted width to fit within box */
+            margin: 0 auto; /* Center button horizontally */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="matthew.png" alt="Header Image">
+    </header>
+    <nav>
+        <a href="main.html" class="button" style="width: 40px; height: 40px;"><img src="about_icon.png" alt="Home"></a> <!-- Modified home link -->
+        <a href="social.html" class="button" style="width: 40px; height: 40px;"><img src="portfolio_icon.png" alt="Social"></a> <!-- Modified social link -->
+        <a href="forum.html" class="button" style="width: 40px; height: 40px;"><img src="forum.png" alt="Forum"></a> <!-- Modified social link -->
+        <a href="https://bit.ly/mmyt" class="button" style="width: 40px; height: 40px;"><img src="contact_icon.png" alt="YouTube"></a> <!-- Modified YouTube link -->
+        <a href="#" id="colorToggleButton" class="button" style="width: 40px; height: 40px;"><img src="green_button.png" alt="Change Color"></a>
+    </nav>
+    <section id="about">
+        <div class="container">
+            <div class="box">
+                <img src="contact_icon.png" alt="Icon 1"> <!-- Icon -->
+                <div class="title">Youtube</div> <!-- Title -->
+                <p></p> <!-- Text -->
+                <a href="https://bit.ly/mmyt" class="button">Visit</a> <!-- Button -->
+            </div>
+            <div class="box">
+                <img src="green_button.png" alt="Icon 2"> <!-- Icon -->
+                <div class="title">FlipAnim</div> <!-- Title -->
+                <p></p> <!-- Text -->
+                <a href="https://flipanim.com/profile?name=MatthewMason" class="button">Visit</a> <!-- Button -->
+            </div>
+            <div class="box">
+                <img src="icon3.png" alt="Icon 3"> <!-- Icon -->
+                <div class="title">Discord</div> <!-- Title -->
+                <p></p> <!-- Text -->
+                <a href="https://discord.gg/JHbJVHjE9x" class="button">Visit</a> <!-- Button -->
+            </div>
+            <div class="box">
+                <img src="icon4.png" alt="Icon 4"> <!-- Icon -->
+                <div class="title">Title 4</div> <!-- Title -->
+                <p></p> <!-- Text -->
+                <a href="https://example.com" class="button">Visit</a> <!-- Button -->
+            </div>
+            <div class="box">
+                <img src="icon5.png" alt="Icon 5"> <!-- Icon -->
+                <div class="title">Title 5</div> <!-- Title -->
+                <p></p> <!-- Text -->
+                <a href="https://example.com" class="button">Visit</a> <!-- Button -->
+            </div>
+            <div class="box">
+                <img src="icon6.png" alt="Icon 6"> <!-- Icon -->
+                <div class="title">Title 6</div> <!-- Title -->
+                <p></p> <!-- Text -->
+                <a href="https://example.com" class="button">Visit</a> <!-- Button -->
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 MatthewMason</p>
+    </footer>
+
+    <script>
+        var colorToggleButton = document.getElementById('colorToggleButton');
+        var isGreenMode = false;
+
+        colorToggleButton.addEventListener('click', function() {
+            if (isGreenMode) {
+                document.body.style.backgroundColor = '#333'; // Grey
+                document.querySelector('footer').style.backgroundColor = '#444'; // Grey
+                document.querySelector('nav').style.backgroundColor = '#444'; // Grey
+                document.body.style.backgroundImage = 'none'; // Remove background image
+                isGreenMode = false;
+            } else {
+                document.body.style.backgroundColor = '#32c871'; // Green
+                document.querySelector('footer').style.backgroundColor = '#297fb8'; // Blue
+                document.querySelector('nav').style.backgroundColor = '#297fb8'; // Blue
+                document.body.style.backgroundImage = 'url("noise.png")'; // Add background image
+                isGreenMode = true;
+            }
+        });
+    </script>
+</body>
+</html>
